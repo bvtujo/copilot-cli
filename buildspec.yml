@@ -10,8 +10,7 @@ phases:
       - cd $CODEBUILD_SRC_DIR
       - mkdir -p /go/src/github.com/aws/amazon-ecs-cli-v2
       - cp -R ./* /go/src/github.com/aws/amazon-ecs-cli-v2
-      - ls -lah /go/src
-      - make test
+      - ls -lah
   build:
     commands:
       - echo "Compilation context:"
