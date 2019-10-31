@@ -15,7 +15,7 @@ phases:
     commands:
       - echo "Compilation context:"
       - echo "CODEBUILD_SOURCE_VERSION=$CODEBUILD_SOURCE_VERSION"
-      - make tool
+      - make tools
       - make release
     finally:
       - echo "Built artifacts:"
