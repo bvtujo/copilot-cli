@@ -14,7 +14,7 @@ phases:
       - echo "Compilation context:"
       - echo "CODEBUILD_SOURCE_VERSION=$CODEBUILD_SOURCE_VERSION"
       - make tools
-      - make release
+      - make
     finally:
       - echo "Built artifacts:"
       - ls -lah ./bin/local
