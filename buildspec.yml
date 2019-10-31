@@ -4,7 +4,7 @@ phases:
   install:
     runtime-versions:
       golang: 1.13
-  pre-build:
+  pre_build:
     commands:
       - echo "cd into $CODEBUILD_SRC_DIR"
       - cd $CODEBUILD_SRC_DIR
@@ -20,11 +20,11 @@ phases:
     finally:
       - echo "Built artifacts:"
       - ls -lah ./bin/local
-      - VERSION=`./bin/local/archer-amd64 --version`
-      - echo "version: $VERSION"
-  post-build:
+      - ./bin/local/archer-amd64 --version
+  post_build:
     commands:
-      - VERSION=`echo $VERSION | grep -oe "[^ ]+$"`
+      - VERSION='./bin/local/archer-amd64 --version'
+      - VERSION=`echo $VERSION | grep -oE "[^ ]+$"`
       - COMMIT_ID=`git rev-parse HEAD`'
       - COMMIT_VERSION=${COMMIT_ID:0:7}'
       - echo "Creating latest and version-tagged artifacts..."
