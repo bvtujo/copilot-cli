@@ -8,8 +8,6 @@ phases:
     commands:
       - echo "cd into $CODEBUILD_SRC_DIR"
       - cd $CODEBUILD_SRC_DIR
-      - mkdir -p /go/src/github.com/aws/amazon-ecs-cli-v2
-      - cp -R ./* /go/src/github.com/aws/amazon-ecs-cli-v2
       - ls -lah
   build:
     commands:
