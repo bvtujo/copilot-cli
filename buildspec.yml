@@ -27,8 +27,8 @@ phases:
     commands:
       - VERSION='./bin/local/archer-amd64 --version'
       - VERSION=`echo $VERSION | grep -oE "[^ ]+$"`
-      - COMMIT_ID=`git rev-parse HEAD`'
-      - COMMIT_VERSION=${COMMIT_ID:0:7}'
+      - COMMIT_ID=`git rev-parse HEAD`
+      - COMMIT_VERSION=${COMMIT_ID:0:7}
       - echo "Creating latest and version-tagged artifacts..."
       - cp ./bin/local/archer.exe ./bin/local/archer-windows-latest.exe
       - cp ./bin/local/archer.exe ./bin/local/archer-windows-$COMMIT_VERSION.exe
