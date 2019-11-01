@@ -10,7 +10,8 @@ phases:
       - cd $CODEBUILD_SRC_DIR
       - unset GOPATH
       - export GOPROXY=direct
-      - ls -lah
+      - go env
+      - export GO111MODULE=on
   build:
     commands:
       - echo "Compilation context:"
