@@ -8,13 +8,15 @@ phases:
     commands:
       - echo "cd into $CODEBUILD_SRC_DIR"
       - cd $CODEBUILD_SRC_DIR
+      - unset GOPATH
+      - export GOPROXY=direct
       - ls -lah
   build:
     commands:
       - echo "Compilation context:"
       - echo "CODEBUILD_SOURCE_VERSION=$CODEBUILD_SOURCE_VERSION"
-      - make tools
-      - make
+      - make gen-mocks
+      - make release
     finally:
       - echo "Built artifacts:"
       - ls -lah ./bin/local
