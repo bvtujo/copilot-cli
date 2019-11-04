@@ -8,7 +8,6 @@ phases:
     commands:
       - echo "cd into $CODEBUILD_SRC_DIR"
       - cd $CODEBUILD_SRC_DIR
-      - export GO111MODULE=on
       - export GOMOD=$CODEBUILD_SRC_DIR/go.mod:GOMOD
       - export GOPATH="/go"
   build:
