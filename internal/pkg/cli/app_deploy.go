@@ -328,7 +328,7 @@ func (o *appDeployOpts) pushToECRRepo() error {
 		return err
 	}
 
-	if err := o.dockerService.Build(uri, o.ImageTag, appDockerfilePath); err != nil {
+	if err := o.dockerService.Build(uri, o.ImageTag, appDockerfilePath, ""); err != nil {
 		return fmt.Errorf("build Dockerfile at %s with tag %s: %w", appDockerfilePath, o.ImageTag, err)
 	}
 
@@ -362,7 +362,7 @@ func (o *appDeployOpts) getAppDockerfilePath() (string, error) {
 	if !ok {
 		return "", fmt.Errorf("application %s does not have a dockerfile path", o.AppName)
 	}
-	return strings.TrimSuffix(mf.DockerfilePath(), "/Dockerfile"), nil
+	return mf.DockerfilePath(), nil
 }
 
 // pushAddonsTemplateToS3Bucket generates the addons template for the application and pushes it to S3.

@@ -17,7 +17,7 @@ func TestBuild(t *testing.T) {
 
 	mockURI := "mockURI"
 	mockImageTag := "mockImageTag"
-	mockPath := "mockPath"
+	mockPath := "./mockPath"
 
 	var mockRunner *mocks.Mockrunner
 
@@ -30,7 +30,7 @@ func TestBuild(t *testing.T) {
 			setupMocks: func(controller *gomock.Controller) {
 				mockRunner = mocks.NewMockrunner(controller)
 
-				mockRunner.EXPECT().Run("docker", []string{"build", "-t", imageName(mockURI, mockImageTag), mockPath}).Return(mockError)
+				mockRunner.EXPECT().Run("docker", []string{"build", "-t", imageName(mockURI, mockImageTag), "--file", mockPath, "."}).Return(mockError)
 			},
 			want: fmt.Errorf("building image: %w", mockError),
 		},
@@ -38,7 +38,7 @@ func TestBuild(t *testing.T) {
 			setupMocks: func(controller *gomock.Controller) {
 				mockRunner = mocks.NewMockrunner(controller)
 
-				mockRunner.EXPECT().Run("docker", []string{"build", "-t", imageName(mockURI, mockImageTag), mockPath}).Return(nil)
+				mockRunner.EXPECT().Run("docker", []string{"build", "-t", imageName(mockURI, mockImageTag), "--file", mockPath, "."}).Return(nil)
 			},
 		},
 	}
@@ -51,7 +51,7 @@ func TestBuild(t *testing.T) {
 				runner: mockRunner,
 			}
 
-			got := s.Build(mockURI, mockImageTag, mockPath)
+			got := s.Build(mockURI, mockImageTag, mockPath, "")
 
 			require.Equal(t, test.want, got)
 		})

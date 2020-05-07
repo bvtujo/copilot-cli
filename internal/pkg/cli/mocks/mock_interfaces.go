@@ -523,17 +523,17 @@ func (m *MockdockerService) EXPECT() *MockdockerServiceMockRecorder {
 }
 
 // Build mocks base method
-func (m *MockdockerService) Build(uri, tag, path string) error {
+func (m *MockdockerService) Build(uri, tag, path, dir string) error {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Build", uri, tag, path)
+	ret := m.ctrl.Call(m, "Build", uri, tag, path, dir)
 	ret0, _ := ret[0].(error)
 	return ret0
 }
 
 // Build indicates an expected call of Build
-func (mr *MockdockerServiceMockRecorder) Build(uri, tag, path interface{}) *gomock.Call {
+func (mr *MockdockerServiceMockRecorder) Build(uri, tag, path, dir interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Build", reflect.TypeOf((*MockdockerService)(nil).Build), uri, tag, path)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Build", reflect.TypeOf((*MockdockerService)(nil).Build), uri, tag, path, dir)
 }
 
 // Login mocks base method

@@ -60,7 +60,7 @@ type stackSerializer interface {
 }
 
 type dockerService interface {
-	Build(uri, tag, path string) error
+	Build(uri, tag, path string, dir string) error
 	Login(uri, username, password string) error
 	Push(uri, tag string) error
 }

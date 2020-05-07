@@ -6,6 +6,7 @@ package docker
 
 import (
 	"fmt"
+	"path/filepath"
 	"strings"
 
 	"github.com/aws/amazon-ecs-cli-v2/internal/pkg/term/command"
@@ -29,10 +30,14 @@ func New() Service {
 }
 
 // Build will run a `docker build` command with the input uri, tag, and Dockerfile image path.
-func (s Service) Build(uri, imageTag, path string) error {
+func (s Service) Build(uri, imageTag, path string, dir string) error {
 	imageName := imageName(uri, imageTag)
 
-	err := s.runner.Run("docker", []string{"build", "-t", imageName, path})
+	if dir == "" {
+		dir = filepath.Dir(path)
+	}
+
+	err := s.runner.Run("docker", []string{"build", "-t", imageName, "--file", path, dir})
 
 	if err != nil {
 		return fmt.Errorf("building image: %w", err)

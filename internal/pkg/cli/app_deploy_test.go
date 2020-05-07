@@ -308,7 +308,7 @@ image:
 			wantPath: "",
 			wantErr:  fmt.Errorf("read manifest file %s: %w", "appA", mockError),
 		},
-		"should trim the manifest DockerfilePath if it contains /Dockerfile": {
+		"should return correct path": {
 			inputApp: "appA",
 			setupMocks: func(controller *gomock.Controller) {
 				mockWorkspace = climocks.NewMockwsAppReader(controller)
@@ -317,7 +317,7 @@ image:
 					mockWorkspace.EXPECT().ReadAppManifest("appA").Times(1).Return(mockManifest, nil),
 				)
 			},
-			wantPath: "appA",
+			wantPath: "appA/Dockerfile",
 			wantErr:  nil,
 		},
 	}
