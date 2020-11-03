@@ -2873,6 +2873,51 @@ func (mr *MockwsAddonManagerMockRecorder) ReadServiceManifest(svcName interface{
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReadServiceManifest", reflect.TypeOf((*MockwsAddonManager)(nil).ReadServiceManifest), svcName)
 }
 
+// ReadJobManifest mocks base method
+func (m *MockwsAddonManager) ReadJobManifest(jobName string) ([]byte, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ReadJobManifest", jobName)
+	ret0, _ := ret[0].([]byte)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ReadJobManifest indicates an expected call of ReadJobManifest
+func (mr *MockwsAddonManagerMockRecorder) ReadJobManifest(jobName interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReadJobManifest", reflect.TypeOf((*MockwsAddonManager)(nil).ReadJobManifest), jobName)
+}
+
+// JobNames mocks base method
+func (m *MockwsAddonManager) JobNames() ([]string, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "JobNames")
+	ret0, _ := ret[0].([]string)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// JobNames indicates an expected call of JobNames
+func (mr *MockwsAddonManagerMockRecorder) JobNames() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "JobNames", reflect.TypeOf((*MockwsAddonManager)(nil).JobNames))
+}
+
+// WorkloadNames mocks base method
+func (m *MockwsAddonManager) WorkloadNames() ([]string, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WorkloadNames")
+	ret0, _ := ret[0].([]string)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// WorkloadNames indicates an expected call of WorkloadNames
+func (mr *MockwsAddonManagerMockRecorder) WorkloadNames() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WorkloadNames", reflect.TypeOf((*MockwsAddonManager)(nil).WorkloadNames))
+}
+
 // MockartifactUploader is a mock of artifactUploader interface
 type MockartifactUploader struct {
 	ctrl     *gomock.Controller

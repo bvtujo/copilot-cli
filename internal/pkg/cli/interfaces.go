@@ -286,6 +286,8 @@ type wsAppManager interface {
 type wsAddonManager interface {
 	WriteAddon(f encoding.BinaryMarshaler, svc, name string) (string, error)
 	wsSvcReader
+	wsJobReader
+	wsWlReader
 }
 
 type artifactUploader interface {
