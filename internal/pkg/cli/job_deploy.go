@@ -264,7 +264,7 @@ func (o *deployJobOpts) dfBuildArgs(job interface{}) (*exec.BuildArguments, erro
 	if err != nil {
 		return nil, fmt.Errorf("get copilot directory: %w", err)
 	}
-	return buildArgs(o.name, o.imageTag, copilotDir, job)
+	return buildArgs(o.name, o.imageTag, o.envName, copilotDir, job)
 }
 
 func (o *deployJobOpts) deployJob(addonsURL string) error {

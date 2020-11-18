@@ -310,12 +310,12 @@ func (o *deploySvcOpts) dfBuildArgs(svc interface{}) (*exec.BuildArguments, erro
 	if err != nil {
 		return nil, fmt.Errorf("get copilot directory: %w", err)
 	}
-	return buildArgs(o.name, o.imageTag, copilotDir, svc)
+	return buildArgs(o.name, o.imageTag, o.envName, copilotDir, svc)
 }
 
-func buildArgs(name, imageTag, copilotDir string, unmarshaledManifest interface{}) (*exec.BuildArguments, error) {
+func buildArgs(name, imageTag, envName, copilotDir string, unmarshaledManifest interface{}) (*exec.BuildArguments, error) {
 	type dfArgs interface {
-		BuildArgs(rootDirectory string) *manifest.DockerBuildArgs
+		BuildArgs(rootDirectory, envName string) (*manifest.DockerBuildArgs, error)
 	}
 	mf, ok := unmarshaledManifest.(dfArgs)
 	if !ok {
@@ -323,7 +323,10 @@ func buildArgs(name, imageTag, copilotDir string, unmarshaledManifest interface{
 	}
 
 	wsRoot := filepath.Dir(copilotDir)
-	args := mf.BuildArgs(wsRoot)
+	args, err := mf.BuildArgs(wsRoot, envName)
+	if err != nil {
+		return nil, fmt.Errorf("get build arguments for %s: %w", name, err)
+	}
 	return &exec.BuildArguments{
 		Dockerfile: *args.Dockerfile,
 		Context:    *args.Context,
