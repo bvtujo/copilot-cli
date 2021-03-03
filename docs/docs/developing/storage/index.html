@@ -16,7 +16,7 @@
     
     
       
-        <title>env init - AWS Copilot CLI</title>
+        <title>Storage - AWS Copilot CLI</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#env-init" class="md-skip">
+        <a href="#storage" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              env init
+              Storage
             
           </span>
         </div>
@@ -524,12 +524,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
       
       <label class="md-nav__link" for="__nav_2_6">
         Developing
@@ -547,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing/environment-variables/" class="md-nav__link">
+      <a href="../environment-variables/" class="md-nav__link">
         Environment Variables
       </a>
     </li>
@@ -559,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing/secrets/" class="md-nav__link">
+      <a href="../secrets/" class="md-nav__link">
         Secrets
       </a>
     </li>
@@ -571,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing/service-discovery/" class="md-nav__link">
+      <a href="../service-discovery/" class="md-nav__link">
         Service Discovery
       </a>
     </li>
@@ -583,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing/additional-aws-resources/" class="md-nav__link">
+      <a href="../additional-aws-resources/" class="md-nav__link">
         Additional AWS Resources
       </a>
     </li>
@@ -595,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing/sidecars/" class="md-nav__link">
+      <a href="../sidecars/" class="md-nav__link">
         Sidecars
       </a>
     </li>
@@ -605,11 +607,122 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../developing/storage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Storage
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-and-artifacts" class="md-nav__link">
+    Database and Artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-systems" class="md-nav__link">
+    File Systems
+  </a>
+  
+    <nav class="md-nav" aria-label="File Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manifest-syntax" class="md-nav__link">
+    Manifest Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-mount-targets" class="md-nav__link">
+    Creating Mount Targets
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Mount Targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-the-aws-cli" class="md-nav__link">
+    With the AWS CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="With the AWS CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup" class="md-nav__link">
+    Cleanup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudformation" class="md-nav__link">
+    CloudFormation
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudFormation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup_1" class="md-nav__link">
+    Cleanup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -623,14 +736,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
       
       <label class="md-nav__link" for="__nav_2_7">
         Commands
@@ -669,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../init/" class="md-nav__link">
+      <a href="../../commands/init/" class="md-nav__link">
         init
       </a>
     </li>
@@ -681,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/" class="md-nav__link">
+      <a href="../../commands/docs/" class="md-nav__link">
         docs
       </a>
     </li>
@@ -697,14 +808,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_2" type="checkbox" id="__nav_2_7_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_2" type="checkbox" id="__nav_2_7_2" >
       
       <label class="md-nav__link" for="__nav_2_7_2">
         Develop
@@ -722,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-init/" class="md-nav__link">
+      <a href="../../commands/app-init/" class="md-nav__link">
         app init
       </a>
     </li>
@@ -734,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-ls/" class="md-nav__link">
+      <a href="../../commands/app-ls/" class="md-nav__link">
         app ls
       </a>
     </li>
@@ -746,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-show/" class="md-nav__link">
+      <a href="../../commands/app-show/" class="md-nav__link">
         app show
       </a>
     </li>
@@ -758,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-delete/" class="md-nav__link">
+      <a href="../../commands/app-delete/" class="md-nav__link">
         app delete
       </a>
     </li>
@@ -768,70 +877,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          env init
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../commands/env-init/" class="md-nav__link">
         env init
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-it-do" class="md-nav__link">
-    What does it do?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-are-the-flags" class="md-nav__link">
-    What are the flags?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-it-look-like" class="md-nav__link">
-    What does it look like?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -841,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../env-ls/" class="md-nav__link">
+      <a href="../../commands/env-ls/" class="md-nav__link">
         env ls
       </a>
     </li>
@@ -853,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../env-show/" class="md-nav__link">
+      <a href="../../commands/env-show/" class="md-nav__link">
         env show
       </a>
     </li>
@@ -865,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../env-delete/" class="md-nav__link">
+      <a href="../../commands/env-delete/" class="md-nav__link">
         env delete
       </a>
     </li>
@@ -877,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-init/" class="md-nav__link">
+      <a href="../../commands/job-init/" class="md-nav__link">
         job init
       </a>
     </li>
@@ -889,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-ls/" class="md-nav__link">
+      <a href="../../commands/job-ls/" class="md-nav__link">
         job ls
       </a>
     </li>
@@ -901,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-package/" class="md-nav__link">
+      <a href="../../commands/job-package/" class="md-nav__link">
         job package
       </a>
     </li>
@@ -913,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-deploy/" class="md-nav__link">
+      <a href="../../commands/job-deploy/" class="md-nav__link">
         job deploy
       </a>
     </li>
@@ -925,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-delete/" class="md-nav__link">
+      <a href="../../commands/job-delete/" class="md-nav__link">
         job delete
       </a>
     </li>
@@ -937,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-init/" class="md-nav__link">
+      <a href="../../commands/svc-init/" class="md-nav__link">
         svc init
       </a>
     </li>
@@ -949,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-ls/" class="md-nav__link">
+      <a href="../../commands/svc-ls/" class="md-nav__link">
         svc ls
       </a>
     </li>
@@ -961,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-show/" class="md-nav__link">
+      <a href="../../commands/svc-show/" class="md-nav__link">
         svc show
       </a>
     </li>
@@ -973,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-logs/" class="md-nav__link">
+      <a href="../../commands/svc-logs/" class="md-nav__link">
         svc logs
       </a>
     </li>
@@ -985,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-status/" class="md-nav__link">
+      <a href="../../commands/svc-status/" class="md-nav__link">
         svc status
       </a>
     </li>
@@ -997,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-package/" class="md-nav__link">
+      <a href="../../commands/svc-package/" class="md-nav__link">
         svc package
       </a>
     </li>
@@ -1009,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-deploy/" class="md-nav__link">
+      <a href="../../commands/svc-deploy/" class="md-nav__link">
         svc deploy
       </a>
     </li>
@@ -1021,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../svc-delete/" class="md-nav__link">
+      <a href="../../commands/svc-delete/" class="md-nav__link">
         svc delete
       </a>
     </li>
@@ -1033,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../task-run/" class="md-nav__link">
+      <a href="../../commands/task-run/" class="md-nav__link">
         task run
       </a>
     </li>
@@ -1045,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../task-delete/" class="md-nav__link">
+      <a href="../../commands/task-delete/" class="md-nav__link">
         task delete
       </a>
     </li>
@@ -1084,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-init/" class="md-nav__link">
+      <a href="../../commands/pipeline-init/" class="md-nav__link">
         pipeline init
       </a>
     </li>
@@ -1096,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-update/" class="md-nav__link">
+      <a href="../../commands/pipeline-update/" class="md-nav__link">
         pipeline update
       </a>
     </li>
@@ -1108,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-ls/" class="md-nav__link">
+      <a href="../../commands/pipeline-ls/" class="md-nav__link">
         pipeline ls
       </a>
     </li>
@@ -1120,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-show/" class="md-nav__link">
+      <a href="../../commands/pipeline-show/" class="md-nav__link">
         pipeline show
       </a>
     </li>
@@ -1132,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-status/" class="md-nav__link">
+      <a href="../../commands/pipeline-status/" class="md-nav__link">
         pipeline status
       </a>
     </li>
@@ -1144,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-delete/" class="md-nav__link">
+      <a href="../../commands/pipeline-delete/" class="md-nav__link">
         pipeline delete
       </a>
     </li>
@@ -1156,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy/" class="md-nav__link">
+      <a href="../../commands/deploy/" class="md-nav__link">
         deploy
       </a>
     </li>
@@ -1195,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-init/" class="md-nav__link">
+      <a href="../../commands/storage-init/" class="md-nav__link">
         storage init
       </a>
     </li>
@@ -1234,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../version/" class="md-nav__link">
+      <a href="../../commands/version/" class="md-nav__link">
         version
       </a>
     </li>
@@ -1246,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../completion/" class="md-nav__link">
+      <a href="../../commands/completion/" class="md-nav__link">
         completion
       </a>
     </li>
@@ -1350,30 +1400,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-does-it-do" class="md-nav__link">
-    What does it do?
+  <a href="#database-and-artifacts" class="md-nav__link">
+    Database and Artifacts
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-are-the-flags" class="md-nav__link">
-    What are the flags?
+  <a href="#file-systems" class="md-nav__link">
+    File Systems
+  </a>
+  
+    <nav class="md-nav" aria-label="File Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manifest-syntax" class="md-nav__link">
+    Manifest Syntax
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+        
+          <li class="md-nav__item">
+  <a href="#creating-mount-targets" class="md-nav__link">
+    Creating Mount Targets
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Mount Targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-the-aws-cli" class="md-nav__link">
+    With the AWS CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="With the AWS CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup" class="md-nav__link">
+    Cleanup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-it-look-like" class="md-nav__link">
-    What does it look like?
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudformation" class="md-nav__link">
+    CloudFormation
   </a>
+  
+    <nav class="md-nav" aria-label="CloudFormation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup_1" class="md-nav__link">
+    Cleanup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1389,55 +1491,195 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/aws/copilot-cli/edit/mainline/site/content/docs/commands/env-init.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/aws/copilot-cli/edit/mainline/site/content/docs/developing/storage.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="env-init">env init</h1>
-<div class="highlight"><pre><span></span><code>$ copilot env init <span class="o">[</span>flags<span class="o">]</span>
+                <h1 id="storage">Storage</h1>
+<p>There are two ways to add persistence to Copilot workloads: using <a href="#database-and-artifacts"><code>copilot storage init</code></a> to create databases and S3 buckets; and attaching an existing EFS filesystem using the <a href="#file-systems"><code>storage</code> field</a> in the manifest. </p>
+<h2 id="database-and-artifacts">Database and Artifacts</h2>
+<p>To add a database or S3 bucket to your job or service, simply run <a href="../../commands/storage-init/"><code>copilot storage init</code></a>.
+<div class="highlight"><pre><span></span><code><span class="c1"># For a guided experience.</span>
+$ copilot storage init -t S3
+
+<span class="c1"># To create a bucket named &quot;my-bucket&quot; accessible by the &quot;api&quot; service.</span>
+$ copilot storage init -n my-bucket -t S3 -w api
+</code></pre></div></p>
+<p>The above command will create the Cloudformation template for an S3 bucket in the <a href="../additional-aws-resources/">addons</a> directory for the "api" service. The next time you run <code>copilot deploy -n api</code>, the bucket will be created, permission to access it will be added to the <code>api</code> task role, and the name of the bucket will be injected into the <code>api</code> container under the environment variable <code>MY_BUCKET_NAME</code>. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All names are converted into SCREAMING_SNAKE_CASE based on their use of hyphens or underscores. You can view the environment variables for a given service by running <code>copilot svc show</code>.</p>
+</div>
+<p>You can also create a <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html">DynamoDB table</a> using <code>copilot storage init</code>. For example, to create the Cloudformation template for a table with a sort key and a local secondary index, you could run the following command.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># For a guided experience.</span>
+$ copilot storage init -t DynamoDB
+
+<span class="c1"># Or by providing flags to skip the prompts.</span>
+$ copilot storage init -n users -t DynamoDB -w api --partition-key id:N --sort-key email:S --lsi post-count:N
 </code></pre></div>
-<h2 id="what-does-it-do">What does it do?</h2>
-<p><code>copilot env init</code> creates a new <a href="../../concepts/environments/">environment</a> where your services will live.</p>
-<p>After you answer the questions, the CLI creates the common infrastructure that's shared between your services such as a VPC, an Application Load Balancer, and an ECS Cluster. Additionally, you can <a href="../../concepts/environments/#customize-your-environment">customize your Copilot environment</a> by either configuring the default environment resources or importing existing resources for your environment.</p>
-<p>You create environments using a <a href="../../credentials/#environment-credentials">named profile</a> to specify which AWS account and region you'd like the environment to be in.</p>
-<h2 id="what-are-the-flags">What are the flags?</h2>
-<p>Like all commands in the AWS Copilot CLI, if you don't provide required flags, we'll prompt you for all the information we need to get you going. You can skip the prompts by providing information via flags:
-<div class="highlight"><pre><span></span><code>Common Flags
-      --aws-access-key-id string       Optional. An AWS access key.
-      --aws-secret-access-key string   Optional. An AWS secret access key.
-      --aws-session-token string       Optional. An AWS session token for temporary credentials.
-      --default-config                 Optional. Skip prompting and use default environment configuration.
-  -n, --name string                    Name of the environment.
-      --prod                           If the environment contains production services.
-      --profile string                 Name of the profile.
-      --region string                  Optional. An AWS region where the environment will be created.
-
-Import Existing Resources Flags
-      --import-private-subnets strings   Optional. Use existing private subnet IDs.
-      --import-public-subnets strings    Optional. Use existing public subnet IDs.
-      --import-vpc-id string             Optional. Use an existing VPC ID.
-
-Configure Default Resources Flags
-      --override-private-cidrs strings   Optional. CIDR to use for private subnets (default 10.0.2.0/24,10.0.3.0/24).
-      --override-public-cidrs strings    Optional. CIDR to use for public subnets (default 10.0.0.0/24,10.0.1.0/24).
-      --override-vpc-cidr ipNet          Optional. Global CIDR to use for VPC (default 10.0.0.0/16).
-
-Global Flags
-  -a, --app string   Name of the application.
+<p>This will create a DynamoDB table called <code>${app}-${env}-${svc}-users</code>. Its partition key will be <code>id</code>, a <code>Number</code> attribute; its sort key will be <code>email</code>, a <code>String</code> attribute; and it will have a <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/LSI.html">local secondary index</a> (essentially an alternate sort key) on the <code>Number</code> attribute <code>post-count</code>. </p>
+<h2 id="file-systems">File Systems</h2>
+<p>Mounting an EFS volume in Copilot tasks requires two things:</p>
+<ol>
+<li>That you create an <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">EFS file system</a> in the desired environment's region.</li>
+<li>That you create an <a href="https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html">EFS Mount Target</a> using the Copilot environment security group in each subnet of your environment. </li>
+</ol>
+<p>When those prerequisites are satisfied, you can enable EFS storage using simple syntax in your manifest. You'll need the filesystem ID and, if using, the access point configuration for the filesystem.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can only use a given EFS file system in a single environment at a time. Mount targets are limited to one per availability zone; therefore, you must delete any existing mount targets before bringing the file system to Copilot if you have used it in another VPC. </p>
+</div>
+<h3 id="manifest-syntax">Manifest Syntax</h3>
+<p>The simplest possible EFS volume can be specified with the following syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">storage</span><span class="p">:</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+    <span class="nt">myEFSVolume</span><span class="p">:</span> <span class="c1"># This is a variable key and can be set to an arbitrary string.</span>
+      <span class="nt">path</span><span class="p">:</span> <span class="s">&#39;/etc/mount1&#39;</span>
+      <span class="nt">efs</span><span class="p">:</span>
+        <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fs-1234567</span> 
+</code></pre></div>
+<p>This will create a read-only mounted volume in your service's or job's container using the filesystem <code>fs-1234567</code>. If mount targets are not created in the subnets of the environment, the task will fail to launch. </p>
+<p>Full syntax for storage follows. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">storage</span><span class="p">:</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+    <span class="p p-Indicator">{{</span> <span class="nv">volume name</span> <span class="p p-Indicator">}}:</span>
+      <span class="nt">path</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">mount path</span> <span class="p p-Indicator">}}</span>             <span class="c1"># Required. The path inside the container.</span>
+      <span class="nt">read_only</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">boolean</span> <span class="p p-Indicator">}}</span>           <span class="c1"># Default: true</span>
+      <span class="nt">efs</span><span class="p">:</span>
+        <span class="nt">id</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">filesystem ID</span> <span class="p p-Indicator">}}</span>          <span class="c1"># Required.</span>
+        <span class="nt">root_dir</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">filesystem root</span> <span class="p p-Indicator">}}</span>  <span class="c1"># Optional. Defaults to &quot;/&quot;. Must not be </span>
+                                         <span class="c1"># specified if using access points.</span>
+        <span class="nt">auth</span><span class="p">:</span> 
+          <span class="nt">iam</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">boolean</span> <span class="p p-Indicator">}}</span>             <span class="c1"># Optional. Whether to use IAM authorization when </span>
+                                         <span class="c1"># mounting this filesystem.</span>
+          <span class="nt">access_point_id</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">access point ID</span><span class="p p-Indicator">}}</span> <span class="c1"># Optional. The ID of the EFS Access Point</span>
+                                                <span class="c1"># to use when mounting this filesystem.</span>
+</code></pre></div>
+<h3 id="creating-mount-targets">Creating Mount Targets</h3>
+<p>There are several ways to create mount targets for an existing EFS filesystem: <a href="#with-the-aws-cli">using the AWS CLI</a> and <a href="#cloudformation">using CloudFormation</a>.</p>
+<h4 id="with-the-aws-cli">With the AWS CLI</h4>
+<p>To create mount targets for an existing filesystem, you'll need </p>
+<ol>
+<li>the ID of that filesystem.</li>
+<li>a Copilot environment deployed in the same account and region.</li>
+</ol>
+<p>To retrieve the filesystem ID, you can use the AWS CLI:
+<div class="highlight"><pre><span></span><code>$ <span class="nv">EFS_FILESYSTEMS</span><span class="o">=</span><span class="k">$(</span>aws efs describe-file-systems <span class="p">|</span> <span class="se">\</span>
+  jq <span class="s1">&#39;.FileSystems[] | {ID: .FileSystemId, CreationTime: .CreationTime, Size: .SizeInBytes.Value}&#39;</span><span class="k">)</span>
 </code></pre></div></p>
-<h2 id="examples">Examples</h2>
-<p>Creates a test environment in your "default" AWS profile using default config.
-<div class="highlight"><pre><span></span><code>$ copilot env init --name <span class="nb">test</span> --profile default --default-config
+<p>If you <code>echo</code> this variable you should be able to find which filesystem you need. Assign it to the variable <code>$EFS_ID</code> and continue.</p>
+<p>You'll also need the public subnets of the Copilot environment and the Environment Security Group. This jq command will filter the output of the describe-stacks call down to simply the desired output value. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The filesystem you use MUST be in the same region as your Copilot environment!</p>
+</div>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">SUBNETS</span><span class="o">=</span><span class="k">$(</span>aws cloudformation describe-stacks --stack-name <span class="si">${</span><span class="nv">YOUR_APP</span><span class="si">}</span>-<span class="si">${</span><span class="nv">YOUR_ENV</span><span class="si">}</span> <span class="se">\</span>
+  <span class="p">|</span> jq <span class="s1">&#39;.Stacks[] | .Outputs[] | select(.OutputKey == &quot;PublicSubnets&quot;) | .OutputValue&#39;</span><span class="k">)</span>
+$ <span class="nv">SUBNET1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$SUBNETS</span> <span class="p">|</span> jq -r <span class="s1">&#39;split(&quot;,&quot;) | .[0]&#39;</span><span class="k">)</span>
+$ <span class="nv">SUBNET2</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$SUBNETS</span> <span class="p">|</span> jq -r <span class="s1">&#39;split(&quot;,&quot;) | .[1]&#39;</span><span class="k">)</span>
+$ <span class="nv">ENV_SG</span><span class="o">=</span><span class="k">$(</span>aws cloudformation describe-stacks --stack-name <span class="si">${</span><span class="nv">YOUR_APP</span><span class="si">}</span>-<span class="si">${</span><span class="nv">YOUR_ENV</span><span class="si">}</span> <span class="se">\</span>
+  <span class="p">|</span> jq -r <span class="s1">&#39;.Stacks[] | .Outputs[] | select(.OutputKey == &quot;EnvironmentSecurityGroup&quot;) | .OutputValue&#39;</span><span class="k">)</span>
+</code></pre></div>
+<p>Once you have these, create the mount targets.</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">MOUNT_TARGET_1_ID</span><span class="o">=</span><span class="k">$(</span>aws efs create-mount-target <span class="se">\</span>
+    --subnet-id <span class="nv">$SUBNET_1</span> <span class="se">\</span>
+    --security-groups <span class="nv">$ENV_SG</span> <span class="se">\</span>
+    --file-system-id <span class="nv">$EFS_ID</span> <span class="p">|</span> jq -r .MountTargetID<span class="k">)</span>
+$ <span class="nv">MOUNT_TARGET_2_ID</span><span class="o">=</span><span class="k">$(</span>aws efs create-mount-target <span class="se">\</span>
+    --subnet-id <span class="nv">$SUBNET_2</span> <span class="se">\</span>
+    --security-groups <span class="nv">$ENV_SG</span> <span class="se">\</span>
+    --file-system-id <span class="nv">$EFS_ID</span> <span class="p">|</span> jq -r .MountTargetID<span class="k">)</span>
+</code></pre></div>
+<p>Once you've done this, you can specify the <code>storage</code> configuration in the manifest as above. </p>
+<h5 id="cleanup">Cleanup</h5>
+<p>Delete the mount targets using the AWS CLI. </p>
+<div class="highlight"><pre><span></span><code>$ aws efs delete-mount-target --mount-target-id <span class="nv">$MOUNT_TARGET_1</span>
+$ aws efs delete-mount-target --mount-target-id <span class="nv">$MOUNT_TARGET_2</span>
+</code></pre></div>
+<h4 id="cloudformation">CloudFormation</h4>
+<p>Here's an example of how you might create the appropriate EFS infrastructure for an external file system using a CloudFormation stack. </p>
+<p>After creating an environment, deploy the following CloudFormation template into the same account and region as the environment.</p>
+<p>Place the following CloudFormation template into a file called <code>efs.yml</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Parameters</span><span class="p">:</span>
+  <span class="nt">App</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Your application&#39;s name.</span>
+  <span class="nt">Env</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The environment name your service, job, or workflow is being deployed to.</span>
+
+<span class="nt">Resources</span><span class="p">:</span>
+  <span class="nt">EFSFileSystem</span><span class="p">:</span>
+    <span class="nt">Metadata</span><span class="p">:</span>
+      <span class="s">&#39;aws:copilot:description&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;An</span><span class="nv"> </span><span class="s">EFS</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">persistent</span><span class="nv"> </span><span class="s">backing</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tasks</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">services&#39;</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EFS::FileSystem</span>
+    <span class="nt">Properties</span><span class="p">:</span>
+      <span class="nt">PerformanceMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generalPurpose</span> 
+      <span class="nt">ThroughputMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bursting</span>
+      <span class="nt">Encrypted</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="nt">MountTargetPublicSubnet1</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EFS::MountTarget</span>
+    <span class="nt">Properties</span><span class="p">:</span> 
+      <span class="nt">FileSystemId</span><span class="p">:</span> <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">EFSFileSystem</span>
+      <span class="nt">SecurityGroups</span><span class="p">:</span> 
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Fn::ImportValue</span><span class="p p-Indicator">:</span>
+            <span class="kt">!Sub</span> <span class="s">&quot;${App}-${Env}-EnvironmentSecurityGroup&quot;</span>
+      <span class="nt">SubnetId</span><span class="p">:</span> <span class="kt">!Select</span> 
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="kt">!Split</span> 
+            <span class="p p-Indicator">-</span> <span class="s">&quot;,&quot;</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Fn::ImportValue</span><span class="p p-Indicator">:</span>
+                <span class="kt">!Sub</span> <span class="s">&quot;${App}-${Env}-PublicSubnets&quot;</span>
+
+  <span class="nt">MountTargetPublicSubnet2</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EFS::MountTarget</span>
+    <span class="nt">Properties</span><span class="p">:</span>
+      <span class="nt">FileSystemId</span><span class="p">:</span> <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">EFSFileSystem</span>
+      <span class="nt">SecurityGroups</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Fn::ImportValue</span><span class="p p-Indicator">:</span>
+            <span class="kt">!Sub</span> <span class="s">&quot;${App}-${Env}-EnvironmentSecurityGroup&quot;</span>
+      <span class="nt">SubnetId</span><span class="p">:</span> <span class="kt">!Select</span> 
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="p p-Indicator">-</span> <span class="kt">!Split</span> 
+            <span class="p p-Indicator">-</span> <span class="s">&quot;,&quot;</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Fn::ImportValue</span><span class="p p-Indicator">:</span>
+                <span class="kt">!Sub</span> <span class="s">&quot;${App}-${Env}-PublicSubnets&quot;</span>
+<span class="nt">Outputs</span><span class="p">:</span>
+  <span class="nt">EFSVolumeID</span><span class="p">:</span>
+    <span class="nt">Value</span><span class="p">:</span> <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">EFSFileSystem</span>
+    <span class="nt">Export</span><span class="p">:</span>
+      <span class="nt">Name</span><span class="p">:</span> <span class="kt">!Sub</span> <span class="l l-Scalar l-Scalar-Plain">${App}-${Env}-FilesystemID</span>
+</code></pre></div>
+<p>Then run:
+<div class="highlight"><pre><span></span><code>$ aws cloudformation deploy 
+    --stack-name efs-cfn <span class="se">\</span>
+    --template-file ecs.yml
+    --parameter-overrides <span class="nv">App</span><span class="o">=</span><span class="si">${</span><span class="nv">YOUR_APP</span><span class="si">}</span> <span class="nv">Env</span><span class="o">=</span><span class="si">${</span><span class="nv">YOUR_ENV</span><span class="si">}</span>
 </code></pre></div></p>
-<p>Creates a prod-iad environment using your "prod-admin" AWS profile using existing VPC.
-<div class="highlight"><pre><span></span><code>$ copilot env init --name prod-iad --profile prod-admin --prod <span class="se">\</span>
---import-vpc-id vpc-099c32d2b98cdcf47 <span class="se">\</span>
---import-public-subnets subnet-013e8b691862966cf,subnet-014661ebb7ab8681a <span class="se">\</span>
---import-private-subnets subnet-055fafef48fb3c547,subnet-00c9e76f288363e7f
+<p>This will create an EFS file system and the mount targets your tasks need using outputs from the Copilot environment stack.</p>
+<p>To get the EFS filesystem ID, you can run a <code>describe-stacks</code> call:</p>
+<div class="highlight"><pre><span></span><code>$ aws cloudformation describe-stacks --stack-name efs-cfn <span class="p">|</span> <span class="se">\</span>
+    jq -r <span class="s1">&#39;.Stacks[] | .Outputs[] | .OutputValue&#39;</span>
+</code></pre></div>
+<p>Then, in the manifest of the service which you would like to have access to the EFS filesystem, add the following configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">storage</span><span class="p">:</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+    <span class="nt">copilotVolume</span><span class="p">:</span> <span class="c1"># This is a variable key and can be set to arbitrary strings.</span>
+      <span class="nt">path</span><span class="p">:</span> <span class="s">&#39;/etc/mount1&#39;</span>
+      <span class="nt">read_only</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> <span class="c1"># Set to false if your service needs write access. </span>
+      <span class="nt">efs</span><span class="p">:</span>
+        <span class="nt">id</span><span class="p">:</span> <span class="p p-Indicator">{{</span> <span class="nv">your filesystem ID</span> <span class="p p-Indicator">}}</span>
+</code></pre></div>
+<p>Finally, run <code>copilot svc deploy</code> to reconfigure your service to mount the filesystem at <code>/etc/mount1</code>. </p>
+<h5 id="cleanup_1">Cleanup</h5>
+<p>To clean this up, remove the <code>storage</code> configuration from the manifest and redeploy the service:
+<div class="highlight"><pre><span></span><code>$ copilot svc deploy
 </code></pre></div></p>
-<h2 id="what-does-it-look-like">What does it look like?</h2>
-<p><img alt="Running copilot env init" src="https://raw.githubusercontent.com/kohidave/copilot-demos/master/env-init.svg?sanitize=true" /></p>
+<p>Then, delete the stack. </p>
+<div class="highlight"><pre><span></span><code>$ aws cloudformation delete-stack --stack-name efs-cfn
+</code></pre></div>
                 
               
               
