@@ -411,22 +411,18 @@ func Test_Environment_Deployment_Integration(t *testing.T) {
 		})
 		require.NoError(t, err)
 
-		// Make sure we delete the stack after the test is done
+		// Best effort delete roles and stack.
 		defer func() {
-			_, err := cfClient.DeleteStack(&awsCF.DeleteStackInput{
+			cfClient.DeleteStack(&awsCF.DeleteStackInput{
 				StackName: aws.String(envStackName),
 			})
-			require.NoError(t, err)
 
-			err = deleteEnvRoles(appName, envName, id.Account, iamClient)
-			require.NoError(t, err)
+			deleteEnvRoles(appName, envName, id.Account, iamClient)
 
-			err = s3Client.EmptyBucket(bucketName)
-			require.NoError(t, err)
-			_, err = s3ManagerClient.S3.DeleteBucket(&s3.DeleteBucketInput{
+			s3Client.EmptyBucket(bucketName)
+			s3ManagerClient.S3.DeleteBucket(&s3.DeleteBucketInput{
 				Bucket: aws.String(bucketName),
 			})
-			require.NoError(t, err)
 		}()
 
 		urls, err := uploader.UploadEnvironmentCustomResources(awss3.CompressAndUploadFunc(func(key string, objects ...awss3.NamedBinary) (string, error) {
